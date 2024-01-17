@@ -1,0 +1,39 @@
+---
+import ExperienceItem from "./icons/ExperienceItem.astro";
+import ExperienceIcon from "./icons/ExperienceItem.astro";
+
+const EXPERIENCE = [
+  {
+    date: "Actualidad...",
+    title: "Programador Web - OBR Group ",
+    description:
+      "Como Programador web me especializo en páginas impactantes para mejorar la presencia online de OBR Group, inmobiliaria, atrayendo y capturando nuevos clientes. Mi enfoque ha elevado la visualización de propiedades residenciales, resultando en un aumento del 15% en la generación de leads para futuras ventas.",
+    link: "#",
+  },
+  {
+    date: "Abril 2022 - Abril 2023",
+
+    title: "Programador IVR - Softkitech",
+    description:
+      "Development especializado en tecnología IVR para una empresa estadounidense . Desarrolle de sistemas IVR para la industria de servicios, incluyendo electricidad y gas. Estos proyectos no solo contribuyeron a mantener a la empresa como líder en el área, sino que también mejoraron significativamente la adquisición y retención de clientes. Colaboré eficientemente con equipos en la India y Estados Unidos, desempeñando un papel clave en el equipo latinoamericano.",
+    link: "#",
+  },
+  {
+    date: "Enero 2022 - Abril 2022",
+    title: "Tecnico en Sistemas Informaticos IT - Grupo Logix",
+    description:
+      "Get started with dozens of web components and interactive elements built on top of Tailwind CSS.",
+    link: "#",
+  },
+];
+---
+
+<ol class="relative border-s border-gray-200 ml-3">
+  {
+    EXPERIENCE.map((experience) => (
+      <li class="mb-10 ms-4">
+        <ExperienceItem {...experience} />
+      </li>
+    ))
+  }
+</ol>
