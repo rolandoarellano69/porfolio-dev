@@ -8,20 +8,22 @@ import Emailcon from "../components/icons/Emailcon.astro";
 import Github from "../components/icons/Github.astro";
 import Experience from "../components/Experience.astro";
 import MaletaIcon from "../components/icons/MaletaIcon.astro";
+import CodeIcon from "../components/icons/CodeIcon.astro";
+import Projects from "../components/Projects.astro";
 ---
 
 <Layout
   title="Portafolio de Rolando A - Ing en sistemas y Programador Web "
   description="Portafolio de Rolando A - Ing en sistemas y Programador Web"
 >
-  <main>
-    <SectionContainer class="py-44 pb-24">
+  <main class="px-4">
+    <SectionContainer class="py-44 pb-32">
       <img
         class="rounded-full size-12 mb-4"
         src="https://media.licdn.com/dms/image/D5603AQF0_g3ei4EUxA/profile-displayphoto-shrink_800_800/0/1692821369057?e=2147483647&v=beta&t=ha722qYEjrfKcS-GRsOjZ2He_hOBDJdHbxfFtLu25qQ"
         alt="photo dev"
       />
-      <h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-4">
+      <h1 class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-4">
         Hey, soy Rolando A <a
           href="https://www.linkedin.com/in/rolando-arellano-m9869/"
           target="_blank"
@@ -31,27 +33,27 @@ import MaletaIcon from "../components/icons/MaletaIcon.astro";
           <Badge>Disponible para trabajar</Badge>
         </a>
       </h1>
-      <h2 class="text-2xl text-wrap">
+      <h2 class="text-xl lg:text-2xl text-wrap max-w-[750px]">
         <span>+1 año de experiencia.</span><span class="text-blue-200/80">
           Ing.en Sistemas Computacionales
         </span> de Baja California, <span class="text-lime-100/80">
           México.</span
         >
         Especializado en <span class="text-blue-200/80">Desarrollado Web</span> y
-        crear aplicaciones únicas.
+        crear aplicaciones con interfaces únicas.
       </h2>
 
-      <nav class="flex gap-x-4 mt-8">
+      <nav class="flex gap-4 mt-8 flex-wrap">
         <SocialPill href="https://www.linkedin.com/in/rolando-arellano-m9869/">
-          <Linkedin class="size-6" />
+          <Linkedin class="size-4 md:size-6" />
           <span class="ml-2">Linkedin</span>
         </SocialPill>
         <SocialPill href="https://github.com/rolandoarellano69">
-          <Github class="size-6" />
+          <Github class="size-4 md:size-6" />
           <span class="ml-2">GitHub</span>
         </SocialPill>
-        <SocialPill>
-          <Emailcon class="size-6" />
+        <SocialPill href="mailto:rolando.arellano18@tectijuana.edu.mx">
+          <Emailcon class="size-4 md:size-6" />
           <span class="ml-2">rolando.arellano18@tectijuana.edu.mx</span>
         </SocialPill>
       </nav>
@@ -59,10 +61,18 @@ import MaletaIcon from "../components/icons/MaletaIcon.astro";
 
       <SectionContainer id="experiencia">
         <h2 class="text-3xl font-semibold mb-6 flex gap-x-2 items-center">
-          <MaletaIcon class="size-8" />
+          <MaletaIcon class="size-5 md:size-8" />
           Experiencia Laboral
         </h2>
         <Experience />
+      </SectionContainer>
+
+      <SectionContainer id="experiencia">
+        <h2 class="text-3xl font-semibold mb-6 flex gap-x-2 items-center">
+          <CodeIcon class="size-5 md:size-8" />
+          Proyectos
+        </h2>
+        <Projects/>
       </SectionContainer>
   </main>
 </Layout>

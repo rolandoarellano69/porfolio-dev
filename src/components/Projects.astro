@@ -1,0 +1,44 @@
+---
+const TAGS = {
+  NEXT: {
+    name: "Next.js",
+    color: "bg-black text-white",
+
+ 
+  },
+};
+
+const PROJECTS = [
+  {
+    title: "Almeria Residencial ⚜️",
+    description:
+      "Landing page diseñada para destacar la exclusiva residencial, logrando más de 300 impresiones mediante una estrategia de búsqueda SEO optimizada. Desarrollada con Astro, React y estilizada con Tailwind CSS.",
+    github:
+      "https://github.com/rolandoarellano69/Landing-page-AlmeriaResidencial",
+    link: "https://almeriaresidencial.com/",
+    image: "/projects/almeriapeek.webp",
+    tag: ["Astro", "Tailwind", "React"],
+  },
+];
+---
+
+{
+  PROJECTS.map(({ title, description, tag, link, github, image }) => (
+    <article>
+      <h3 class="text-2xl font-semibold text-sky-300 mb-2">{title}</h3>
+      <p class="text-lg mb-4 text-pretty">{description}</p>
+      <a href={github}>Github</a>
+      <ul>
+        {tag.map((tag) => (
+          <li>{tag}</li>
+        ))}
+      </ul>
+      <img
+        class="rounded shadow-2xl shadow-white/10 "
+        src={image}
+        alt={`Captura de pantalla del proyecto ${title}`}
+      />
+      
+    </article>
+  ))
+}
