@@ -1,10 +1,23 @@
 ---
+import NextJsIcon from "./icons/NextjsIcon.astro";
+import TailwindIcon from "./icons/TailwindIcon.astro";
+import ReactIcon from "./icons/ReactIcon.astro";
+
 const TAGS = {
   NEXT: {
     name: "Next.js",
-    color: "bg-black text-white",
-
- 
+    class: "bg-black text-white",
+    icon: NextJsIcon,
+  },
+  TAILWIND: {
+    name: "Tailwind CSS",
+    class: "bg-[#003159] text-white",
+    icon: TailwindIcon,
+  },
+  REACT: {
+    name: "React",
+    class: "bg-[#23272f] text-white",
+    icon: ReactIcon,
   },
 };
 
@@ -17,28 +30,34 @@ const PROJECTS = [
       "https://github.com/rolandoarellano69/Landing-page-AlmeriaResidencial",
     link: "https://almeriaresidencial.com/",
     image: "/projects/almeriapeek.webp",
-    tag: ["Astro", "Tailwind", "React"],
+    tags: [TAGS.NEXT, TAGS.TAILWIND, TAGS.REACT],
   },
 ];
 ---
 
-{
-  PROJECTS.map(({ title, description, tag, link, github, image }) => (
-    <article>
-      <h3 class="text-2xl font-semibold text-sky-300 mb-2">{title}</h3>
-      <p class="text-lg mb-4 text-pretty">{description}</p>
-      <a href={github}>Github</a>
-      <ul>
-        {tag.map((tag) => (
-          <li>{tag}</li>
-        ))}
-      </ul>
-      <img
-        class="rounded shadow-2xl shadow-white/10 "
-        src={image}
-        alt={`Captura de pantalla del proyecto ${title}`}
-      />
-      
-    </article>
-  ))
-}
+<section>
+  {
+    PROJECTS.map(({ title, description, tags, link, github, image }) => (
+      <article>
+        <h3 class="text-2xl font-semibold text-sky-300 mb-2">{title}</h3>
+        <p class="text-lg mb-4 text-pretty">{description}</p>
+        <a href={github}>Github</a>
+        <ul class="flex gap-x-2 flex-row mb-2">
+          {tags.map((tag) => (
+            <li>
+              <span class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2`} >
+              <tag.icon class="size-4" />
+              {tag.name}
+              </span>
+            </li>
+          ))}
+        </ul>
+        <img
+          class="rounded shadow-2xl shadow-white/10 "
+          src={image}
+          alt={`Captura de pantalla del proyecto ${title}`}
+        />
+      </article>
+    ))
+  }
+</section>
