@@ -4,8 +4,8 @@ import TailwindIcon from "./icons/TailwindIcon.astro";
 import ReactIcon from "./icons/ReactIcon.astro";
 
 const TAGS = {
-  NEXT: {
-    name: "Next.js",
+    ASTRO: {
+    name: "Astro",
     class: "bg-black text-white",
     icon: NextJsIcon,
   },
@@ -29,8 +29,8 @@ const PROJECTS = [
     github:
       "https://github.com/rolandoarellano69/Landing-page-AlmeriaResidencial",
     link: "https://almeriaresidencial.com/",
-    image: "/projects/almeriapeek.webp",
-    tags: [TAGS.NEXT, TAGS.TAILWIND, TAGS.REACT],
+    image: "/projects/486shots_so.webp",
+    tags: [TAGS.ASTRO, TAGS.TAILWIND, TAGS.REACT],
   },
 ];
 ---
@@ -53,7 +53,7 @@ const PROJECTS = [
           ))}
         </ul>
         <img
-          class="rounded shadow-2xl shadow-white/10 "
+          class="rounded shadow-xl shadow-white/10 "
           src={image}
           alt={`Captura de pantalla del proyecto ${title}`}
         />

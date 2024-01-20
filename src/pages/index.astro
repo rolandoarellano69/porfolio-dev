@@ -10,6 +10,8 @@ import Experience from "../components/Experience.astro";
 import MaletaIcon from "../components/icons/MaletaIcon.astro";
 import CodeIcon from "../components/icons/CodeIcon.astro";
 import Projects from "../components/Projects.astro";
+import UserIcon from "@/components/icons/UserIcon.astro";
+import AboutMe from "@/components/AboutMe.astro";
 ---
 
 <Layout
@@ -43,7 +45,7 @@ import Projects from "../components/Projects.astro";
         crear aplicaciones con interfaces únicas.
       </h2>
 
-      <nav class="flex gap-4 mt-8 flex-wrap">
+      <nav class="flex gap-5 mt-8 flex-wrap">
         <SocialPill href="https://www.linkedin.com/in/rolando-arellano-m9869/">
           <Linkedin class="size-4 md:size-6" />
           <span class="ml-2">Linkedin</span>
@@ -67,12 +69,21 @@ import Projects from "../components/Projects.astro";
         <Experience />
       </SectionContainer>
 
-      <SectionContainer id="experiencia">
+      <SectionContainer id="proyectos">
         <h2 class="text-3xl font-semibold mb-6 flex gap-x-2 items-center">
           <CodeIcon class="size-5 md:size-8" />
           Proyectos
         </h2>
         <Projects/>
+      </SectionContainer>
+
+      <SectionContainer id="sobre-mi">
+        <h2 class="text-3xl font-semibold mb-6 flex gap-x-2 items-center">
+       <UserIcon class="size-5 md:size-8" />
+          Sobre Mi
+        </h2>
+        <AboutMe />
+    
       </SectionContainer>
   </main>
 </Layout>

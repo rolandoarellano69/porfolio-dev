@@ -1,22 +1,20 @@
-<footer class="pt-16 pb-10">
-  <div class="max-w-[60rem] mx-auto px-4 relative">
-    <div class="flex flex-col space-y-2">
-      <div class="w-full border-t border-amber-50 pb-5"></div>
-      <div class="flex flex-col md:flex-row space-y-4 md:space-y-0 justify-between items-center">
-        <div class="hidden md:block relative overflow-hidden rounded-full">
-          <img
-          class="rounded-full size-12 mb-4"
-          src="https://media.licdn.com/dms/image/D5603AQF0_g3ei4EUxA/profile-displayphoto-shrink_800_800/0/1692821369057?e=2147483647&v=beta&t=ha722qYEjrfKcS-GRsOjZ2He_hOBDJdHbxfFtLu25qQ"
-          alt="photo dev"
-        />
-        <div class="flex flex-col items-center md:items-start">
-          <span class="leading-none">© Desde el 2015. </span>
+---
+import MexicoFlag from "./icons/MexicoFlag.astro";
 
-        </div>
-        </div>
 
-      </div>
-    </div>
+---
+<footer class="rounded-lg shadow m-4 bg-black/20 backdrop-blur-lg w-full xl:w-[1120px] mx-auto mb-10  ">
+  <div class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
+    <span class=" flex gap-x-2 text-sm text-white/90 sm:text-center">© Hecho en México <MexicoFlag class="size-5"/> <a href="/" class="hover:underline">Rolando A</a>
+  </span>
+  <ul class="flex flex-wrap items-center mt-3 text-sm font-medium text-white/90 sm:mt-0">
+      <li>
+          <a href="#" class="hover:underline me-4 md:me-6">Sobre mí</a>
+      </li>
+      <li>
+          <a href="#" class="hover:underline">Contacto</a>
+      </li>
+  </ul>
   </div>
-Hecho en Mexico
 </footer>
+

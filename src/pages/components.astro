@@ -1,0 +1,60 @@
+---
+import Badge from "@/components/Badge.astro";
+import Layout from "@/layouts/Layout.astro";
+import SocialPill from "@/components/SocialPill.astro";
+import SectionContainer from "@/components/SectionContainer.astro";
+import Github from "@/components/icons/Github.astro";
+import Linkedin from "@/components/icons/Linkedin.astro";
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
+
+---
+
+<Layout
+  title="Design System portafolio"
+  description="Design System, catálogo de compoentes del portafolio"
+>
+  <SectionContainer class="py-44 pb-32 flex flex-col gap-y-10">
+
+    <h1 class="text-4xl font-bold mb-4">Design System</h1>
+    <section class="mb-10">
+      <h2 class="text-xl font-bold mb-4">&lt;Badge /&gt;</h2>
+      <Badge
+        class="bg-yellow-100/80 text-yellow-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded border border-yellow-300"
+      >
+        Javasript
+      </Badge>
+      <Badge
+        class="bg-blue-100 text-blue-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded"
+      >
+        React
+      </Badge>
+      <Badge
+        class="bg-green-100 text-green-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded"
+      >
+        Vue
+      </Badge>
+    </section>
+
+    <section class="mb-10">
+      <h2 class="text-xl font-bold mb-4">&lt;SocialPill /&gt;</h2>
+      <div class="flex gap-x-4">
+        <SocialPill href="https://github.com/rolandoarellano69">
+          <Github class="size-4 md:size-6" />
+          Github
+        </SocialPill>
+        <SocialPill href="https://www.linkedin.com/in/rolando-arellano">
+          <Linkedin class="size-4 md:size-6" />
+          Linkedin
+        </SocialPill>
+      </div>
+    </section>
+    <section class="mb-10">
+      <h2 class="text-xl font-bold mb-4">&lt;Header /&gt;</h2>
+      <div class="flex gap-x-4">
+       <Header />
+      </div>
+    </section>
+   
+  </SectionContainer>
+</Layout>
