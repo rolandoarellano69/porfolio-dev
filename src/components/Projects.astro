@@ -2,9 +2,12 @@
 import NextJsIcon from "./icons/NextjsIcon.astro";
 import TailwindIcon from "./icons/TailwindIcon.astro";
 import ReactIcon from "./icons/ReactIcon.astro";
+import LinkButtom from "./LinkButtom.astro";
+import LinkIcon from "./icons/LinkIcon.astro";
+import Github from "./icons/Github.astro";
 
 const TAGS = {
-    ASTRO: {
+  ASTRO: {
     name: "Astro",
     class: "bg-black text-white",
     icon: NextJsIcon,
@@ -25,29 +28,46 @@ const PROJECTS = [
   {
     title: "Almeria Residencial ⚜️",
     description:
-      "Landing page diseñada para destacar la exclusiva residencial, logrando más de 300 impresiones mediante una estrategia de búsqueda SEO optimizada. Desarrollada con Astro, React y estilizada con Tailwind CSS.",
+      "Landing page diseñada para destacar la exclusiva residencial ubicada en Tijuana B.C, logrando más de 300 impresiones mediante una estrategia de búsqueda SEO optimizada. Desarrollada con Astro, React y estilizada con Tailwind CSS.",
     github:
       "https://github.com/rolandoarellano69/Landing-page-AlmeriaResidencial",
     link: "https://almeriaresidencial.com/",
     image: "/projects/486shots_so.webp",
     tags: [TAGS.ASTRO, TAGS.TAILWIND, TAGS.REACT],
   },
+  {
+    title: "OBR GROUP Inmobiliaria 🏗️",
+    description:"Sito web rediseña y desarrollado para la empresa OBR GROUP de Tijuana B.C, con el objetivo de mostrar sus servicios y proyectos empresariales. Con una buena implementación de SEO se busca aumentar el número de visitar y se establece en una buena posición. Desarrollado con React y estilizado con Tailwind CSS.",
+    github: "",
+    link: "https://obrgroup.com.mx/",
+    image: "/projects/obr.webp",
+    tags: [TAGS.REACT, TAGS.TAILWIND],
+  },
+  {
+    title: "Interaccion Humana - Universidad Iberoamericana de Tijuana 🧠",
+    description:"Sitio web desarrollado para la materia de Interacción Humana de la Universidad Iberoamericana de Tijuana, con el objetivo de mostrar los proyectos realizados por los alumnos, como también información, medios audivisuales, material y más. Desarrollado con Wordpress.",
+    github: "",
+    link: "https://obrgroup.com.mx/",
+    image: "/projects/obr.webp",
+    tags: [TAGS.REACT, TAGS.TAILWIND],
+  },
 ];
 ---
 
-<section>
+<section class="flex flex-col gap-y-16">
   {
     PROJECTS.map(({ title, description, tags, link, github, image }) => (
       <article>
-        <h3 class="text-2xl font-semibold text-sky-300 mb-2">{title}</h3>
-        <p class="text-lg mb-4 text-pretty">{description}</p>
-        <a href={github}>Github</a>
+        <h3 class="text-2xl font-semibold text-sky-300 mb-4">{title}</h3>
+        <p class="text-lg mb-4 text-pretty">{description}</p>    
         <ul class="flex gap-x-2 flex-row mb-2">
           {tags.map((tag) => (
             <li>
-              <span class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2`} >
-              <tag.icon class="size-4" />
-              {tag.name}
+              <span
+                class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2`}
+              >
+                <tag.icon class="size-4" />
+                {tag.name}
               </span>
             </li>
           ))}
@@ -57,6 +77,17 @@ const PROJECTS = [
           src={image}
           alt={`Captura de pantalla del proyecto ${title}`}
         />
+        <footer class="flex gap-x-4 mt-4 mb-6">
+          {github && (<LinkButtom href={github}>
+            <Github class="size-6  " />
+            Ver Código
+          </LinkButtom>
+          )}
+          <LinkButtom href={link}>
+            <LinkIcon class="size-6" />
+            Sitio Web
+          </LinkButtom>
+        </footer>
       </article>
     ))
   }

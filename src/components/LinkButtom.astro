@@ -1,10 +1,9 @@
 ---
-const {link} = Astro.props
+const {href} = Astro.props
 ---
 <a
-href={link}
-  class="transition-background inline-flex h-12 items-center justify-center rounded-md border border-slate-800 bg-gradient-to-r from-slate-100 via-[#c7d2fe] to-[#8678f9] bg-[length:200%_200%] bg-[0%_0%] px-6 font-medium text-black duration-500 hover:bg-[100%_200%] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50"
+href={href}
+  class="text-white bg-[#24292F] hover:bg-[#24292F]/90 hover:scale-110 transition focus:ring-4 focus:outline-none focus:ring-[#24292F]/50 font-medium rounded-xl text-sm px-3 py-2 text-center inline-flex items-center dark:focus:ring-gray-500 dark:hover:bg-[#050708]/30 me-2 mb-2"
 >
-
 <slot/>
 </a>
