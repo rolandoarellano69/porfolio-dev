@@ -5,6 +5,7 @@ import ReactIcon from "./icons/ReactIcon.astro";
 import LinkButtom from "./LinkButtom.astro";
 import LinkIcon from "./icons/LinkIcon.astro";
 import Github from "./icons/Github.astro";
+import WordpressIcon from "./icons/WordpressIcon.astro";
 
 const TAGS = {
   ASTRO: {
@@ -21,6 +22,11 @@ const TAGS = {
     name: "React",
     class: "bg-[#23272f] text-white",
     icon: ReactIcon,
+  },
+  WORDPRESS: {
+    name: "Wordpress",
+    class: "bg-[#21759b] text-white",
+    icon: WordpressIcon,
   },
 };
 
@@ -47,9 +53,9 @@ const PROJECTS = [
     title: "Interaccion Humana - Universidad Iberoamericana de Tijuana 🧠",
     description:"Sitio web desarrollado para la materia de Interacción Humana de la Universidad Iberoamericana de Tijuana, con el objetivo de mostrar los proyectos realizados por los alumnos, como también información, medios audivisuales, material y más. Desarrollado con Wordpress.",
     github: "",
-    link: "https://obrgroup.com.mx/",
-    image: "/projects/obr.webp",
-    tags: [TAGS.REACT, TAGS.TAILWIND],
+    link: "https://interaccionhumana.tijuana.ibero.mx/",
+    image: "/projects/Ibero.webp",
+  tags: [TAGS.WORDPRESS],
   },
 ];
 ---
